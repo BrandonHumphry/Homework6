@@ -1,0 +1,19 @@
+#rowDiv {
+    margin: auto;
+    text-align: center;
+    width: 100%;
+}
+
+input[type="text"]{
+    height: 40px;
+    font-size: 20px;
+}
+
+#submitWeather {
+    background-image: url("search.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 25px;
+    height: 40px;
+    width: 40px;
+}
