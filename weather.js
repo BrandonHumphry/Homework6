@@ -36,15 +36,15 @@ $('#submitWeather').click(function(){
                            
 
                             for (var i=0; i<5; i++){
-                            let card = $("<div>").addClass("card")
-                            let body = $("<div>").addClass("card-body")
-                            let title = $("<h1>").addClass("card-title").text(Math.floor(data2.daily[i].temp.day))
-                            let humidity = $("<p>").addClass(data2.daily[i].humidity)
-                            // let card = $("<div>").addClass("card")
-                            // let card = $("<div>").addClass("card")
-                            card.append(title, humidity)
-                            $("#forecast").append(title, humidity)
-                            }
+                                let card = $("<div>").addClass("card")
+                                let body = $("<div>").addClass("card-body")
+                                let title = $("<h1>").addClass("card-title").text(Math.floor(data2.daily[i].temp.day))
+                                let humidity = $("<p>").addClass(data2.daily[i].humidity)
+
+                                // card.append(title, humidity)
+                                $("#forecast").append(title, humidity)
+                                
+                                }
 
                             }
                         });
@@ -55,25 +55,11 @@ $('#submitWeather').click(function(){
 }});
 
 function show(data){
-    return "<h2>" + data.name + "</h2>" +
+    return "<h2>" + "Current Weather:" + data.name + "</h2>" +
            "<h3><strong>Temp</strong>:"+ Math.floor(data.main.temp) + "</h3>" +
            "<h3><strong>Humidity</strong>:"+ data.main.humidity + "</h3>" +
            "<h3><strong>Wind Speed</strong>:"+ data.wind.speed + "</h3>" +
-           "<h3><strong>lon</strong>:"+ data.coord.lon + "</h3>" +
-           "<h3><strong>lat</strong>:"+ data.coord.lat + "</h3>" +
-        //    "<h3><strong>current</strong>:"+ data.clouds + "</h3>" +
-           "<img src="+'http://openweathermap.org/img/w/' + data.weather[0].icon + ".png>";
+           "<img src="+'https://openweathermap.org/img/w/' + data.weather[0].icon + ".png>";
 }
-
-// function show(data2){
-//     return "<h2>" + data.name + "</h2>" +
-//            "<h3><strong>Temp</strong>:"+ Math.floor(data.main.temp) +"</h3>" +
-//            "<h3><strong>Humidity</strong>:"+ data.main.humidity + "</h3>" +
-//            "<h3><strong>Wind Speed</strong>:"+ data.wind.speed + "</h3>" +
-//            "<h3><strong>lon</strong>:"+ data.coord.lon + "</h3>" +
-//            "<h3><strong>lat</strong>:"+ data.coord.lat + "</h3>" +
-//            "<img src="+'http://openweathermap.org/img/w/' + data.weather[0].icon + ".png>";
-// }
-
 
 
