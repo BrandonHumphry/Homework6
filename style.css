@@ -17,3 +17,19 @@ input[type="text"]{
     height: 40px;
     width: 40px;
 }
+
+#forecast {
+    font-size: 15px;
+}
+
+.historyCity {
+   background-color: transparent;
+   border-color: transparent;
+   text-decoration: underline;
+   color: #003f61;
+   font-size: 16px;
+   text-align: left;
+   width: 150px;
+}
+
+
